@@ -19,5 +19,16 @@ def merge_sort (numbers):
         #Implement the merge step
         i = 0 #leftmost element of the left array
         j = 0 #leftmost element of the right array
+        k = 0 #merged array index
+
+        #Comparing
+        while i < len(left_array) and j < len (right_array):
+            if left_array [i] < right_array [j]:
+                numbers[k] = left_array[i]
+
+                i +=1
+                k +=1
+
+
 
 merge_sort(numbers) #call the function
