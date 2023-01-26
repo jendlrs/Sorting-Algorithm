@@ -6,6 +6,7 @@
 
 #Assigned the array values
 numbers = [41, 4, 47, 94, 40, 66, 42, 23, 60, 55]
+print (f"\nThe unsorted numbers: {numbers}\n")
 
 def insertion_sort (numbers):
     for i in range(1, len(numbers)): #Outer loop that will iterate the unsorted part of the list
@@ -14,6 +15,7 @@ def insertion_sort (numbers):
                 numbers [j], numbers [j+1] = numbers [j+1], numbers [j] #Swap to move the element in correct position
             else:
                 break
+        print (f"Updated List: {numbers}")
 
-insertion_sort(numbers)
-print (numbers)
+insertion_sort(numbers) #Call the function
+print(f"\nThe sorted numbers: {numbers}\n")
