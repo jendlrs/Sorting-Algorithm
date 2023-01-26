@@ -39,9 +39,10 @@ def merge_sort (numbers):
             k +=1
 
         while j < len (right_array): #Transfers elements from right array to the merged array
-            numbers [k] = right_array
+            numbers [k] = right_array[j]
             j +=1
             k +=1
 
 
 merge_sort(numbers) #call the function
+print (numbers)
