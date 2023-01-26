@@ -14,9 +14,10 @@ def bubble_sort(numbers):
                 temp_num = numbers [j]
                 numbers [j] = numbers[j+1]
                 numbers [j+1] = temp_num
-                
-        print(f"Iteration #{j}:", numbers)
-
+                print (f"\033[93m{numbers[j+1]}\033[0m is larger than \033[92m{numbers[j]},\033[0m they swapped.")
+                print(f"\nUpdated list: {numbers}\n")
+            else:
+                print(f"\033[93m{numbers[j+1]}\033[0m is smaller than \033[92m{numbers[j]},\033[0m, their positions will not change.")
 bubble_sort(numbers)
 print(numbers)
 
