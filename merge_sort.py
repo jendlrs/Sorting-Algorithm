@@ -6,12 +6,15 @@
 
 #Assigned the array values
 numbers = [41, 4, 47, 94, 40, 66, 42, 23, 60, 55]
-print (f"\nThe unsorted numbers: {numbers}\n")
+print (f"\nThe unsorted numbers: {numbers}")
 
 def merge_sort (numbers):
     if len(numbers) > 1: #Split whole array in half
         left_array  = numbers [:len(numbers)//2] #Sub array for first half (left to middle)
         right_array =  numbers [len(numbers)//2:] #Sub array for second half (middle to last)
+
+        print (f"\nLeft array: {left_array}")
+        print (f"\nRight array: {right_array}")
 
         #recursion for two array
         merge_sort(left_array)
