@@ -6,6 +6,7 @@
 
 #Assigned the array values
 numbers = [41, 4, 47, 94, 40, 66, 42, 23, 60, 55]
+print (f"\nThe unsorted numbers: {numbers}\n")
 
 def merge_sort (numbers):
     if len(numbers) > 1: #Split whole array in half
@@ -43,6 +44,7 @@ def merge_sort (numbers):
             j +=1
             k +=1
 
+        print(numbers)
 
 merge_sort(numbers) #call the function
-print (numbers)
+print(f"\nThe sorted numbers: {numbers}\n")
