@@ -28,6 +28,10 @@ def merge_sort (numbers):
 
                 i +=1
                 k +=1
+            else:
+                numbers [k] = right_array[j]
+                j +=1
+                k +=1
 
 
 
