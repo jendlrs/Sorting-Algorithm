@@ -31,6 +31,13 @@ def partition(numbers, left, right):
         while j > left and numbers [j] >= pivot:
             j -= 1
 
-        if i < j: #Check if two elements didn't cross
+        if i < j: #Check if two elements (i and j) didn't cross, then swap elements at index i with the element at index j
             numbers[i], numbers[j] = numbers[j], numbers[i] 
 
+    if numbers [i] > pivot: #Check if two elements (i and j) have crossed, then swap array at index i with the array at index right
+        numbers [i], numbers [right] = numbers [right], numbers [i]
+    
+    return i
+
+quick_sort(numbers, 0, len(numbers) - 1)
+print(numbers)
