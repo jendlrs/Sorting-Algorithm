@@ -26,8 +26,11 @@ def partition(numbers, left, right):
     while i < j:
         #Moving i to the right
         while i < right and numbers [i] < pivot:
-            i +=1
+            i += 1
         #Moving j to the left
         while j > left and numbers [j] >= pivot:
             j -= 1
+
+        if i < j: #Check if two elements didn't cross
+            numbers[i], numbers[j] = numbers[j], numbers[i] 
 
