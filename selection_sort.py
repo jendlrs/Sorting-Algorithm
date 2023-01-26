@@ -12,5 +12,9 @@ def selection_sort (numbers): #This will check every value in the array
         current_min_index = i 
         for j in range (i + 1, len (numbers)):
             if numbers[j] < numbers [current_min_index]: 
-                current_min_index = j #changed the minimum index 
+                current_min_index = j #changed the minimum index once the element that is lower than the current min index was detected.
 
+        numbers [i], numbers[current_min_index] = numbers[current_min_index], numbers[i] #Swap the element where the search started
+
+selection_sort(numbers) #call the funtion
+print(numbers)
