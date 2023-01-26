@@ -6,6 +6,7 @@
 
 #Assigned the array values
 numbers = [41, 4, 47, 94, 40, 66, 42, 23, 60, 55]
+print (f"\nThe unsorted numbers: {numbers}")
 
 def selection_sort (numbers): #This will check every value in the array
     for i in range (0, len(numbers) - 1): 
@@ -17,4 +18,4 @@ def selection_sort (numbers): #This will check every value in the array
         numbers [i], numbers[current_min_index] = numbers[current_min_index], numbers[i] #Swap the element where the search started
 
 selection_sort(numbers) #call the funtion
-print(numbers)
+print(f"\nThe sorted numbers: {numbers}\n")
