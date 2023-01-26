@@ -14,6 +14,8 @@ def bubble_sort(numbers):
                 temp_num = numbers [j]
                 numbers [j] = numbers[j+1]
                 numbers [j+1] = temp_num
+                
+        print(f"Iteration #{j}:", numbers)
 
 bubble_sort(numbers)
 print(numbers)
