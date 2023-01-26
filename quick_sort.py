@@ -13,7 +13,21 @@ numbers = [41, 4, 47, 94, 40, 66, 42, 23, 60, 55]
 def quick_sort (numbers, left, right):
     if left < right:
         partition_pos = partition (numbers, left, right)
-        quick_sort (numbers, left, partition_pos -1)
-        quick_sort (numbers, partition_pos + 1, right)
+        
+        #Recursion of sorting two arrays
+        quick_sort (numbers, left, partition_pos - 1) #From leftmost index to the number before index partition
+        quick_sort (numbers, partition_pos + 1, right) #From the number after the partition to the rightmost index.
 
 def partition(numbers, left, right):
+    i = left
+    j = right - 1
+    pivot = numbers[right]
+
+    while i < j:
+        #Moving i to the right
+        while i < right and numbers [i] < pivot:
+            i +=1
+        #Moving j to the left
+        while j > left and numbers [j] >= pivot:
+            j -= 1
+
