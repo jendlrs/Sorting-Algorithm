@@ -12,7 +12,12 @@ def merge_sort (numbers):
         left_array  = numbers [:len(numbers)//2] #Sub array for first half (left to middle)
         right_array =  numbers [len(numbers)//2:] #Sub array for second half (middle to last)
 
-        print (left_array)
-        print (right_array)
+        #recursion for two array
+        merge_sort(left_array)
+        merge_sort(right_array)
+
+        #Implement the merge step
+        i = 0 #leftmost element of the left array
+        j = 0 #leftmost element of the right array
 
 merge_sort(numbers) #call the function
