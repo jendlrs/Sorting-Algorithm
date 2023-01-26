@@ -33,6 +33,11 @@ def merge_sort (numbers):
                 j +=1
                 k +=1
 
+        while i < len(left_array): #Transfer every element from left array to the merge array without getting into right array
+            numbers [k] = left_array[i]
+            i +=1
+            k +=1
+
 
 
 merge_sort(numbers) #call the function
