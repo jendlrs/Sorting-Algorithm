@@ -6,6 +6,7 @@
 
 #Assigned the array values
 numbers = [41, 4, 47, 94, 40, 66, 42, 23, 60, 55]
+print (f"\nThe unsorted numbers: {numbers}\n")
 
 def bubble_sort(numbers):
     for i in range (len(numbers) - 1, 0, -1): #External loop
@@ -14,10 +15,9 @@ def bubble_sort(numbers):
                 temp_num = numbers [j]
                 numbers [j] = numbers[j+1]
                 numbers [j+1] = temp_num
-                print (f"\033[93m{numbers[j+1]}\033[0m is larger than \033[92m{numbers[j]},\033[0m they swapped.")
-                print(f"\nUpdated list: {numbers}\n")
-            else:
-                print(f"\033[93m{numbers[j+1]}\033[0m is smaller than \033[92m{numbers[j]},\033[0m, their positions will not change.")
+                print (f"\n\033[93m{numbers[j+1]}\033[0m is larger than \033[92m{numbers[j]}\033[0m they swapped.")
+                print (f"Updated List: {numbers}")
+
 bubble_sort(numbers)
-print(numbers)
+print(f"\nThe sorted numbers: {numbers}\n")
 
